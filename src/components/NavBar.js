@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from './assets/images/Professional Logo.png';
 import navIcon1 from './assets/images/navIcon1.png';
 import navIcon2 from './assets/images/navIcon2.png';
@@ -56,7 +56,5 @@ export const NavBar = () => {
   );
 }
 
-export default BasicExample;
-    )
-
-}
+export default NavBar;
+```

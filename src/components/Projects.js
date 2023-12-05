@@ -8,6 +8,8 @@ import project5 from "../assets/images/jate.png";
 import project6 from "../assets/images/coderefactor.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+
 
 
 export const Projects = () => {

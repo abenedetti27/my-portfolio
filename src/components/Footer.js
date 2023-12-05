@@ -14,9 +14,9 @@ export const Footer = () => {
             </Col>
             <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" style={{ width: '5%', height: 'auto' }}/></a>
-              <a href="#"><img src={navIcon2} alt="Icon" style={{ width: '5%', height: 'auto' }}/></a>
-              <a href="#"><img src={navIcon3} alt="Icon" style={{ width: '5%', height: 'auto' }}/></a>
+              <a href="https://github.com/abenedetti27"><img src={navIcon1} alt="Icon" style={{ width: '5%', height: 'auto' }}/></a>
+              <a href="https://www.linkedin.com/in/anna-rose-benedetti/"><img src={navIcon2} alt="Icon" style={{ width: '5%', height: 'auto' }}/></a>
+              <a href="https://www.instagram.com/annadoesntmatch/"><img src={navIcon3} alt="Icon" style={{ width: '5%', height: 'auto' }}/></a>
             </div>
             <p>Copyright Anna Rose Benedetti 2023. All Rights Reserved</p>
             </Col>

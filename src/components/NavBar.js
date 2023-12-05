@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import logo from './assets/images/Professional Logo.png';
-import navIcon1 from './assets/images/navIcon1.png';
-import navIcon2 from './assets/images/navIcon2.png';
-import navIcon3 from './assets/images/navIcon3.png';
+import ProfessionalLogo from '../assets/images/ProfessionalLogo.png';
+import navIcon1 from '../assets/images/navIcon1.png';
+import navIcon2 from '../assets/images/navIcon2.png';
+import navIcon3 from '../assets/images/navIcon3.png';
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -18,20 +18,21 @@ export const NavBar = () => {
             }
         }
 
-        window.addEventListener('scroll', onScroll);
+        window.addEventListener("scroll", onScroll);
 
-        return () => window.removeEventListener('scroll', onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    const onUpdateActiveLink = (link) => {
+    const onUpdateActiveLink = (value) => {
         setActiveLink(value);
     }
 
     return (
+        <Router>
     <Navbar expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-            <img src={logo} alt="logo" />
+            <img src={ProfessionalLogo} alt="logo" />
             </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"/>
@@ -53,8 +54,8 @@ export const NavBar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </Router>
   );
 }
 
 export default NavBar;
-```

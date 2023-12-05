@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import ProfessionalLogo from '../assets/images/ProfessionalLogo.png';
+import ProfessionalLogo from '../assets/images/tplogo.png';
 import navIcon1 from '../assets/images/navIcon1.png';
 import navIcon2 from '../assets/images/navIcon2.png';
 import navIcon3 from '../assets/images/navIcon3.png';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -32,7 +34,7 @@ export const NavBar = () => {
     <Navbar expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-            <img src={ProfessionalLogo} alt="logo" />
+            <img src={ProfessionalLogo} alt="logo" style={{ width: '50%', height: 'auto' }}/>
             </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"/>
@@ -45,11 +47,11 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-             <a href="#"><img src={navIcon1} alt="" /></a>  
-             <a href="#"><img src={navIcon2} alt="" /></a>   
-             <a href="#"><img src={navIcon3} alt="" /></a>   
+             <a href="#"><img src={navIcon1} alt="" style={{ width: '10%', height: 'auto' }}/></a>  
+             <a href="#"><img src={navIcon2} alt="" style={{ width: '10%', height: 'auto' }}/></a>   
+             <a href="#"><img src={navIcon3} alt="" style={{ width: '10%', height: 'auto' }}/></a>   
             </div> 
-            <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button> 
+            {/* <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>  */}
             </span>
         </Navbar.Collapse>
       </Container>

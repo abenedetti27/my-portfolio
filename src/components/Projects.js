@@ -44,6 +44,7 @@ export const Projects = () => {
         title: 'Just Another Text Editor',
         imgURL: project5,
         repoURL: 'https://github.com/abenedetti27/text-editor',
+        appURL: ''
     },
 
     {

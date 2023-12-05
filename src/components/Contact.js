@@ -5,9 +5,9 @@ import TrackVisibility from 'react-on-screen';
 
 export const Contact = () => {
     const personalInfo = {
-        firstName: 'Anna Rose',
-        lastName: 'Benedetti',
-        email: 'abenedetti27@gmail.com'
+        firstName: '',
+        lastName: '',
+        email: ''
     }
     const [formDetails, setFormDetails] = useState(personalInfo);
     const [buttonText, setButtonText] = useState('Send Message');
@@ -43,7 +43,7 @@ export const Contact = () => {
       return (
         <section className="contact" id="connect">
         <Container>
-          <Row className="align-items-center">
+          <Row className="align-items-right">
             <Col size={12} md={6}>
             </Col>
             <Col size={12} md={6}>

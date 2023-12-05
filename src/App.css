@@ -138,6 +138,11 @@ nav.navBar .navBar-toggler .icon-bar {
   pointer-events: none;
 }
 
+.project-image {
+  height: 5%;
+  width: auto;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

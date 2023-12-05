@@ -5,7 +5,7 @@ export const ProjectCard = ({ title, description, imgURL, appURL, repoURL }) => 
   return (
     <Col size={12} sm={6} md={4}>
       <div className="project-card">
-        <img src={imgURL} alt="Project" />
+        {/* <img src={imgURL} alt="Project" /> */}
         <div className="project-details">
           <h3>{title}</h3>
           <a href={appURL} target="_blank" rel="noopener noreferrer">

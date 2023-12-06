@@ -1,5 +1,7 @@
 # React Portfolio
 
+[Visit Deployed Site](https://main--lucent-froyo-82613f.netlify.app/)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description <a name="description"></a>

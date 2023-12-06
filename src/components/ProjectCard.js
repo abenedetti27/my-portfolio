@@ -7,7 +7,7 @@ export const ProjectCard = ({ title, description, imgURL, appURL, repoURL }) => 
       <div className="project-card">
         {/* <img src={imgURL} alt="Project" /> */}
         <div className="project-details">
-          <h3>{title}</h3>
+          <h5>{title}</h5>
           <a href={appURL} target="_blank" rel="noopener noreferrer">
             <img src={imgURL} alt={title} className="project-image" />
           </a>

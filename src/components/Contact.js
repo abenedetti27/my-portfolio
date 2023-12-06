@@ -8,7 +8,8 @@ export const Contact = () => {
     const personalInfo = {
         firstName: '',
         lastName: '',
-        email: ''
+        email: '',
+        message: ''
     }
     const [formDetails, setFormDetails] = useState(personalInfo);
     const [buttonText, setButtonText] = useState('Send Message');
@@ -18,7 +19,7 @@ export const Contact = () => {
         setFormDetails({
             ...formDetails,
             [category]: value
-          })
+          });
       }
 
       const handleSubmit = async (e) => {
@@ -73,10 +74,10 @@ return (
             <Form.Label>Message</Form.Label>
             <Form.Control
                 as="textarea"
-                    ows={3}
+                rows={3}
                 value={formDetails.message}
-                    onChange={(e) => onFormUpdate('message', e.target.value)}
-                    style={{width: '400px'}}
+                onChange={(e) => onFormUpdate('message', e.target.value)}
+                style={{width: '400px'}}
             />
         </Form.Group>
         <button type="submit"><span>{buttonText}</span></button>

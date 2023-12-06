@@ -66,7 +66,7 @@ export const Projects = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h2>Projects</h2>
-                                    <Row xs={1} sm={2} md={3} lg={4} xl={4}>
+                                    <Row md={3}>
                                         {projects.map((project, index) => (
                                             <Col key={index} className="mb-4">
                                                 <ProjectCard {...project} />

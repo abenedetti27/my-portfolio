@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   
 }
 
@@ -26,6 +27,11 @@ body {
   background-position: center;
   background-repeat: repeat;
  
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -160,6 +166,9 @@ img{
 }
 
 @media (max-width: 768px) {
+  .project-image {
+    padding: 40px 10px;
+  }
   /* Styles for smaller screens go here */
 }
 

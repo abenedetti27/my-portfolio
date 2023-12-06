@@ -5,12 +5,13 @@ import navIcon1 from '../assets/images/navIcon1.png';
 import navIcon2 from '../assets/images/navIcon2.png';
 import navIcon3 from '../assets/images/navIcon3.png';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 
 export const NavBar = () => {
-    const [activeLink, setActiveLink] = useState('home');
+    // eslint-disable-next-line no-empty-pattern
+    const [] = useState('home');
     const [scrolled, seScrolled] = useState(false);
 
     useEffect(() => {
@@ -27,9 +28,6 @@ export const NavBar = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    const onUpdateActiveLink = (value) => {
-        setActiveLink(value);
-    }
 
     return (
         <section className="header" id="home">

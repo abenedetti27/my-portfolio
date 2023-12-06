@@ -1,4 +1,4 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import project1 from "../assets/images/apiadventures.gif";
 import project2 from "../assets/images/gonutzdonutz.png";
@@ -8,7 +8,7 @@ import project5 from "../assets/images/jate.png";
 import project6 from "../assets/images/coderefactor.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+//import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 
 

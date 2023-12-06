@@ -1,46 +1,56 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "animate.css";
-import TrackVisibility from "react-on-screen";
 import Form from "react-bootstrap/Form";
+
 export const Contact = () => {
   const [formState, setFormState] = useState({
-    message: "",
+    name: "", // Add 'name' to the initial state
     email: "",
+    message: "",
   });
+
   const [errorMessage, setErrorMessage] = useState("");
-  const { email, message } = formState;
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!errorMessage) {
       console.log("Submit Form", formState);
     }
   };
+
   const handleChange = (e) => {
-    if (!errorMessage) {
-      setFormState({ ...formState, [e.target.name]: e.target.value });
+    // Use the callback function of setState to log the updated state
+    setFormState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }), () => {
       console.log("Handle Form", formState);
+    });
+
+    // Reset error message when the user starts typing again
+    if (errorMessage) {
+      setErrorMessage("");
     }
   };
+
   return (
     <Container>
       <Row>
         <Col xs={12} md={6} className="ms-auto">
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Name</Form.Label>
+              <Form.Label>Name</Form.Label>
               <Form.Control
-                type="name"
+                type="text" // Change 'name' to 'text'
                 name="name"
                 placeholder="First Last"
                 onBlur={handleChange}
                 style={{ width: "400px" }}
               />
             </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
+            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
@@ -50,10 +60,7 @@ export const Contact = () => {
                 style={{ width: "400px" }}
               />
             </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
+            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Message</Form.Label>
               <Form.Control
                 as="textarea"
@@ -77,6 +84,7 @@ export const Contact = () => {
     </Container>
   );
 };
+
 export default Contact;
 
 //       return (
